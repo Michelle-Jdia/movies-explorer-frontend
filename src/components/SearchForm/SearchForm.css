@@ -1,0 +1,132 @@
+.searchForm {
+  padding: 0 70px;
+  font-family: "Inter", Arial, sans-serif;
+  position: relative;
+}
+
+.searchForm__search {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  width: 100%;
+}
+
+.searchForm__search::placeholder {
+  font-size: 18px;
+  line-height: 1.1;
+  color: #a0a0a0;
+}
+
+.searchForm__search-block {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  padding: 19px 25px;
+  position: relative;
+  border-radius: 9px;
+}
+
+.searchForm__find-btn {
+  background: url("../../images/top-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.2s;
+  z-index: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.searchForm__find-btn:hover {
+  opacity: 0.7;
+}
+
+.searchForm__find-btn:active {
+  opacity: 0.3;
+}
+
+.search__box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchForm__find-block {
+  position: relative;
+  min-width: 80px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.main__line-search {
+  background-color: #e8e8e8;
+  height: 1px;
+  border: none;
+  margin-top: 70px;
+}
+
+.searchForm__line-v {
+  height: 40px;
+  border: 0;
+  width: 1px;
+  background-color: #e8e8e8;
+  margin: 0 29px;
+}
+
+.searchForm__text-error {
+  position: absolute;
+  bottom: -18px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 1.1;
+  color: #ee3465;
+}
+
+.search-icon {
+  background-image: url("../../images/search-icon.svg");
+  width: 25px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .searchForm {
+    padding: 80px 30px 60px 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .searchForm__search-block {
+    flex-direction: column;
+    background-color: transparent;
+  }
+  .search__box {
+    background-color: #f9f9f9;
+    padding: 19px 25px;
+  }
+  .searchForm__line-v {
+    display: none;
+  }
+  .main__line-search {
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchForm {
+    padding: 84px 14px 50px 14px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .searchForm {
+    padding-top: 5vh;
+    padding-bottom: 0;
+  }
+}
