@@ -84,6 +84,9 @@
   transition: 0.2s;
   background-repeat: no-repeat;
 }
+.moviesCard__button-save_saved {
+  background-image: url("../../images/d9.svg");
+}
 
 @media screen and (max-width: 320px) {
   .moviesCard__title {

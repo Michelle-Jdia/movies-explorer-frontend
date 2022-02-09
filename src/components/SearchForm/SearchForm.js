@@ -4,7 +4,7 @@ import './SearchForm.css';
 
 function SearchForm() {
   return (
-    <form className="searchForm">
+    <form className="searchForm" required>
       <div className="searchForm__search-block">
         <div className="search__box">
           <span className="search-icon"></span>
@@ -13,6 +13,7 @@ function SearchForm() {
             className="searchForm__search"
             type="text"
             placeholder="Фильм"
+            required
           ></input>
           <div className="searchForm__find-block">
             <button

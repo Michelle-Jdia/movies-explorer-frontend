@@ -30,7 +30,7 @@ function App() {
           </Header>
         </Route>
         <Route exact path={'/'}>
-          <Header isLogged={loggedIn} isPromo={true}>
+          <Header isLogged={loggedIn} isPromo={true} >
             <ProtectedRoute
               exact
               path={'/'}

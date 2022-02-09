@@ -32,7 +32,7 @@ function Profile() {
               name="email"
               className="profile__input"
               type="email"
-              placeholder="vtal96@mail.ru"
+              placeholder="mm@mail.ru"
               required
             ></input>
           </div>

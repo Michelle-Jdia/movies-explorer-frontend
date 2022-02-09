@@ -70,10 +70,12 @@
   top: 13px;
   right: 5px;
   border-radius: 50%;
+  display: none;
 }
 
 .signForm__password_visible {
   background-image: url("../../images/visible.png");
+  display: none;
 }
 
 .signForm__buttons {

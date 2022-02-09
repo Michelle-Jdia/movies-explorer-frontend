@@ -1,5 +1,6 @@
 .filterCheckbox {
   display: flex;
+  align-items: center;
 }
 
 .filterCheckbox__switch-description {

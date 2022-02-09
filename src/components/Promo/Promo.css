@@ -7,6 +7,7 @@
   justify-content: space-between;
   overflow: hidden;
   font-family: "Inter", Arial, sans-serif;
+  transform: translateY(-1px);
 }
 .promo__box {
   max-width: 506px;
@@ -37,9 +38,10 @@
   color: #fff;
   cursor: pointer;
   border-radius: 3px;
+  text-decoration: none;
 }
 .promo__btn:visited {
-  color: rgb(83, 80, 80);
+  color: #fff;
 }
 
 .promo__btn:active {
@@ -70,7 +72,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.1;
+    opacity: 0.04;
   }
 }
 
