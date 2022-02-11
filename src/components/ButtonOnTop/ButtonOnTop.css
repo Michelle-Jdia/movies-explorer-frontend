@@ -17,8 +17,8 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
+/* will add it after diplom */
 .buttonOnTop_active {
   opacity: 1;
-  display: block;
+  display: none;
 }
