@@ -106,6 +106,9 @@
 }
 
 @media screen and (max-width: 320px) {
+  .techs {
+    background-color: #fff;
+  }
   .techs__subtitle {
     padding-top: 60px;
     padding-bottom: 24px;
@@ -115,5 +118,11 @@
   }
   .description_techs {
     padding-bottom: 50px;
+  }
+  .techs__list {
+    padding: 0;
+    max-width: 67%;
+    margin: 0 auto;
+    justify-content: unset;
   }
 }
