@@ -18,7 +18,7 @@
 .infoPopup__close-btn {
   position: absolute;
   transform-origin: 0% 100%;
-  background-image: url("../../images/close.png");
+  background-image: url("../../images/close.svg");
   background-position: center;
   background-repeat: no-repeat;
   min-width: 40px;

@@ -1,5 +1,5 @@
-export const BASE_URL = 'http://localhost:5000';
-
+// export const BASE_URL = 'http://localhost:5000';
+export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://api.dip.nomoredomains.work' : 'http://localhost:5000';
 export const register = (name, email, password) => fetch(`${BASE_URL}/signup`, {
   method: 'POST',
   headers: {
