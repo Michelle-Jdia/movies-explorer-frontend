@@ -78,17 +78,23 @@ export const saveMovie = (movie) => fetch(`${BASE_URL}/movies`, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    country: movie.country,
-    director: movie.director,
-    duration: movie.duration,
-    year: movie.year,
-    description: movie.description,
-    image: `https://api.nomoreparties.co${movie.image.url}`,
-    trailer: movie.trailerLink,
-    thumbnail: `https://api.nomoreparties.co${movie.image.formats.thumbnail.url}`,
+    country: movie.country ? movie.country : 'Неизвестно',
+    description: movie.description ? movie.description : 'Нет описания',
+    director: movie.director ? movie.director : 'Неизвестно',
+    duration: movie.duration ? movie.duration : 0,
+    image: movie.image.url
+      // eslint-disable-next-line no-undef
+      ? `https://api.nomoreparties.co${movie.image.url}` : iconMovie,
+    nameEN: movie.nameEN ? movie.nameEN : 'Неизвестно',
+    nameRU: movie.nameRU ? movie.nameRU : 'Неизвестно',
+    trailer: movie.trailerLink
+      ? movie.trailerLink
+      : `https://www.youtube.com/results?search_query=трейлер+${movie.nameRU}`,
+    year: movie.year ? movie.year : 'Неизвестно',
+    thumbnail: movie.image.formats.thumbnail.url
+      // eslint-disable-next-line no-undef
+      ? `https://api.nomoreparties.co${movie.image.formats.thumbnail.url}` : iconMovie,
     movieId: movie.id,
-    nameRU: movie.nameRU,
-    nameEN: movie.nameEN,
   }),
 })
   .then((res) => res.json());
