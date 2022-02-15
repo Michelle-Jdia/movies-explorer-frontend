@@ -80,7 +80,7 @@
 }
 
 .moviesCard__button-save_delete {
-  background-image: url("../../images/save9.svg");
+  background-image: url("../../images/close.svg");
   transition: 0.2s;
   background-repeat: no-repeat;
 }

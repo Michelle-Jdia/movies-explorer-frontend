@@ -219,6 +219,7 @@ function App() {
 
   function handleSignOut() {
     localStorage.removeItem('token');
+    localStorage.clear();
     setLoggedIn(false);
   }
 
