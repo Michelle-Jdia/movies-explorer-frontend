@@ -27,11 +27,12 @@ function Profile({
     errors,
     isValid,
     resetForm,
+    values,
   } = useFormWithValidation();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (isValid) {
+    if (isValid || (currentUser.name === values.name || currentUser.email === values.email)) {
       resetForm();
       await onUpdateUser({ name, email });
       setShowMessage(true);
@@ -64,12 +65,12 @@ function Profile({
               className="profile__input"
               type="text"
               onChange={handleInputNameChange}
-              placeholder="Виталий"
+              placeholder="Mishel"
               value={name || ''}
               pattern="^[a-zA-Zа-яёЁА-Я\s-]+$"
               minLength="2"
-                maxLength="30"
-                required
+              maxLength="30"
+              required
             ></input>
             {errors.name && (
               <span className="profile__text-error">{errors.name}</span>
@@ -84,7 +85,7 @@ function Profile({
               className="profile__input"
               type="email"
               onChange={handleInputEmailChange}
-              placeholder="vtal96@mail.ru"
+              placeholder="mishel@mail.ru"
               value={email || ''}
               required
             ></input>
@@ -96,12 +97,12 @@ function Profile({
         <div>
           <p className={`profile__api  ${status === false && showMessage === true ? 'profile__api_error profile__api_enabled' : ''}`}>{message}</p>
           <p className={`profile__api  ${status === true && showMessage === true ? 'profile__api_successful profile__api_enabled' : ''}`}>Данные обновлены успешно!</p>
-          <button className={`profile__submit-btn ${isValid === true ? 'profile__submit-btn_enabled' : ''}`} type="submit" disabled={!isValid}>
+          <button className={`profile__submit-btn ${(!isValid || (currentUser.name === values.name || currentUser.email === values.email)) ? 'profile__submit-btn_disabled' : 'profile__submit-btn_enabled'}`} type="submit" disabled={!isValid || (currentUser.name === values.name || currentUser.email === values.email)}>
             Редактировать
           </button>
-            <Link className="profile__logout-btn" type="button" to="/" onClick={onSignOut}>
+          <Link className="profile__logout-btn" type="button" to="/" onClick={onSignOut}>
             Выйти из аккаунта
-            </Link>
+          </Link>
         </div>
       </form>
     </section>
